@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="main_title_size">30sp</dimen>
+
+    <dimen name="margin_5sp">5sp</dimen>
+    <dimen name="margin_15sp">15sp</dimen>
+    <dimen name="margin_60sp">60sp</dimen>
+    <dimen name="margin_120sp">120sp</dimen>
+
+    <dimen name="info_size">20sp</dimen>
+
+    <dimen name="recycler_card_elevation">5sp</dimen>
+    <dimen name="recycler_card_corner_radius">5dp</dimen>
+
+    <dimen name="elevation">4dp</dimen>
+    <dimen name="card_height">180dp</dimen>
+    <dimen name="card_image_side">150dp</dimen>
+    <dimen name="card_elevation">4dp</dimen>
+    <dimen name="card_corner_radius">1dp</dimen>
+
+</resources>

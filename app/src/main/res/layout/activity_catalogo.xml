@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/margin_15sp"
+    android:paddingLeft="@dimen/margin_15sp"
+    android:paddingRight="@dimen/margin_15sp"
+    android:paddingTop="@dimen/margin_15sp"
+    tools:context=".CatalogoActivity">
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical"
+        card_view:cardCornerRadius="@dimen/recycler_card_corner_radius"
+        card_view:cardElevation="@dimen/recycler_card_elevation"
+        card_view:cardUseCompatPadding="true" />
+
+
+</android.support.constraint.ConstraintLayout>

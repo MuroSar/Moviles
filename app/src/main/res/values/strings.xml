@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">TP Moviles-Servicios</string>
+
+    <!--Main activity -->
+    <string name="que_queres_hacer">¿Qué querés hacer?</string>
+
+    <string name="ver_catalogo">Ver catálogo</string>
+    <string name="agregar_vinilo">Agregar vinilo</string>
+    <string name="eliminar_vinilo">Eliminar vinilo</string>
+    <string name="modificar_vinilo">Modificar vinilo</string>
+    <string name="sobre_nosotros">Sobre nosotros</string>
+
+    <string name="no_hay_elementos">No hay elementos para mostrar</string>
+
+    <!--Sobre nosotros activity -->
+    <string name="info_sobre_nosotros">TP realizado como final de las materias \"Introducción a la programación de dispositivos moviles\" y \"Computación orientada a servicios\"</string>
+    <string name="cynthia_romina_marin">Cynthia Romina Marin</string>
+    <string name="mauro_sarti">Mauro Sarti</string>
+
+    <!--Card activity -->
+    <string name="nombre">Nombre: </string>
+    <string name="marca">Marca: </string>
+    <string name="codigo">Código: </string>
+    <string name="precio">Precio: </string>
+
+</resources>

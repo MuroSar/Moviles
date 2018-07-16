@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/margin_15sp"
+    android:paddingLeft="@dimen/margin_15sp"
+    android:paddingRight="@dimen/margin_15sp"
+    android:paddingTop="@dimen/margin_15sp"
+    android:orientation="vertical"
+    tools:context=".SobreNosotrosActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/sobre_nosotros"
+        android:textAlignment="center"
+        android:textSize="@dimen/main_title_size"
+        tools:ignore="SpUsage" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/info_sobre_nosotros"
+        android:textAlignment="center"
+        android:textSize="@dimen/info_size"
+        tools:ignore="SpUsage"
+        android:layout_marginTop="@dimen/margin_60sp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/cynthia_romina_marin"
+        android:textAlignment="center"
+        android:textSize="@dimen/info_size"
+        tools:ignore="SpUsage"
+        android:layout_marginTop="@dimen/margin_120sp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/mauro_sarti"
+        android:textAlignment="center"
+        android:textSize="@dimen/info_size"
+        tools:ignore="SpUsage"/>
+
+</LinearLayout>
