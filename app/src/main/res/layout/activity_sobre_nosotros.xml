@@ -24,7 +24,7 @@
         android:layout_height="wrap_content"
         android:text="@string/info_sobre_nosotros"
         android:textAlignment="center"
-        android:textSize="@dimen/info_size"
+        android:textSize="@dimen/info_size_sobre_nosotros"
         tools:ignore="SpUsage"
         android:layout_marginTop="@dimen/margin_60sp"/>
 
@@ -33,7 +33,7 @@
         android:layout_height="wrap_content"
         android:text="@string/cynthia_romina_marin"
         android:textAlignment="center"
-        android:textSize="@dimen/info_size"
+        android:textSize="@dimen/info_size_sobre_nosotros"
         tools:ignore="SpUsage"
         android:layout_marginTop="@dimen/margin_120sp"/>
 
@@ -42,7 +42,7 @@
         android:layout_height="wrap_content"
         android:text="@string/mauro_sarti"
         android:textAlignment="center"
-        android:textSize="@dimen/info_size"
+        android:textSize="@dimen/info_size_sobre_nosotros"
         tools:ignore="SpUsage"/>
 
 </LinearLayout>

@@ -26,6 +26,6 @@ public class CatalogoActivity extends AppCompatActivity {
         List<Vinilo> vinilos = parametroRecibida.getParcelableArrayList("vinilos");
 
         recyclerView.setAdapter(new VinilosAdapter(vinilos));
-        recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
     }
 }

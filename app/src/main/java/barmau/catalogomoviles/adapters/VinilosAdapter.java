@@ -64,6 +64,12 @@ public class VinilosAdapter extends RecyclerView.Adapter<VinilosAdapter.VinilosV
 
         public VinilosViewHolder(View parent) {
             super(parent);
+
+            cardImage = parent.findViewById(R.id.cardImage);
+            txtCodigo = parent.findViewById(R.id.txtCodigo);
+            txtNombre = parent.findViewById(R.id.txtNombre);
+            txtMarca = parent.findViewById(R.id.txtMarca);
+            txtPrecio = parent.findViewById(R.id.txtPrecio);
         }
 
 //        @OnClick(R.id.cardImage)
