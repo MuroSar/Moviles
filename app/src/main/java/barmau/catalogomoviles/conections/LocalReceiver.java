@@ -31,7 +31,7 @@ public class LocalReceiver extends BroadcastReceiver {
             for (int i = 0; i < jsonArray.length(); i++) {
                 JSONObject json = jsonArray.getJSONObject(i);
 
-                Vinilo vinilo = new Vinilo(json.getString("codigo"), json.getString("marca"), json.getString("nombre"), json.getString("color"), json.getString("codColor"), json.getDouble("precio"));
+                Vinilo vinilo = new Vinilo(json.getString("codigo"), json.getString("nombre"), json.getString("color"), json.getDouble("precio"));
 
                 vinilos.add(vinilo);
             }

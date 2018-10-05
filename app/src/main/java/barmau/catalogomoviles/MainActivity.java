@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //primero llamo al servicio para que me traiga una lista de vinilos
+
                 //List<Vinilo> vinilos = new ArrayList<>();
                 //Vinilo v1 = new Vinilo("a1", "marca1", "vinilo-a1", "rojo", "FF0000", 11.5);
                 //Vinilo v2 = new Vinilo("b2", "marca1", "vinilo-b2", "azul", "0101DF", 12.4);
@@ -45,12 +46,7 @@ public class MainActivity extends AppCompatActivity {
                 //vinilos.add(v2);
                 //showVinilos(vinilos);
 
-                LocalBroadcastManager.getInstance(getContext()).registerReceiver(reciever, new IntentFilter(CallService.RESPONSE_ACTION));
-                final Intent mServiceIntent = new Intent(MainActivity.this, CallService.class);
-
-                ConnectivityManager connMgr = (ConnectivityManager) getSystemService(MainActivity.CONNECTIVITY_SERVICE);
-                NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
-                startService(mServiceIntent);
+                getVinilos();
             }
         });
 
@@ -100,7 +96,12 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public Context getContext() {
-        return this;
+    private void getVinilos() {
+        LocalBroadcastManager.getInstance(this).registerReceiver(reciever, new IntentFilter(CallService.RESPONSE_ACTION));
+        final Intent mServiceIntent = new Intent(this, CallService.class);
+
+        ConnectivityManager connMgr = (ConnectivityManager) getSystemService(MainActivity.CONNECTIVITY_SERVICE);
+        NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
+        startService(mServiceIntent);
     }
 }

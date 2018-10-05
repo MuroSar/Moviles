@@ -21,7 +21,7 @@ public class CallService extends IntentService {
     public static final String RESPONSE_ACTION = "Respuesta del servidor";
     public static final String RESPONSE = "DATA RESPONSE";
     public static final String SERVICE_TYPE = "SERVICE_TYPE";
-    final String BASE_URL = "http://192.168.0.5:8080/RestWebService/catalogo/";//"http://192.168.0.19:8080/OlimpicRestServer/olimpic/";
+    final String BASE_URL = "http://192.168.0.18:8080/RestWebService/catalogo/";
     static final String TAG = CallService.class.getCanonicalName();
 
     public CallService() {
@@ -30,7 +30,7 @@ public class CallService extends IntentService {
 
     @Override
     protected void onHandleIntent(@Nullable Intent intent) {
-        Uri builtURI = Uri.parse(BASE_URL + "getCatalogo").buildUpon().build();
+        Uri builtURI = Uri.parse(BASE_URL + "getcatalogo").buildUpon().build();
         InputStream is = null;
         HttpURLConnection conn = null;
         try {

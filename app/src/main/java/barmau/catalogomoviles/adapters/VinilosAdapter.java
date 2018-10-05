@@ -40,11 +40,11 @@ public class VinilosAdapter extends RecyclerView.Adapter<VinilosAdapter.VinilosV
     public void onBindViewHolder(@NonNull VinilosViewHolder holder, int position) {
         Vinilo vinilo = vinilos.get(position);
 
-        holder.cardImage.setBackgroundColor(Color.parseColor("#" + vinilo.getCodColor()));
+        holder.cardImage.setBackgroundColor(Color.parseColor("#" + vinilo.getColor()));
+        holder.txtColor.setText(new StringBuilder().append("#").append(vinilo.getColor()).toString());
         holder.txtCodigo.setText(vinilo.getCodigo());
         holder.txtNombre.setText(vinilo.getNombre());
-        holder.txtMarca.setText(vinilo.getMarca());
-        holder.txtPrecio.setText("$" + vinilo.getPrecio());
+        holder.txtPrecio.setText(new StringBuilder().append("$").append(vinilo.getPrecio()).toString());
     }
 
     @Override
@@ -57,7 +57,7 @@ public class VinilosAdapter extends RecyclerView.Adapter<VinilosAdapter.VinilosV
         ImageView cardImage;
         TextView txtCodigo;
         TextView txtNombre;
-        TextView txtMarca;
+        TextView txtColor;
         TextView txtPrecio;
 
 //        private int imageId;
@@ -68,7 +68,7 @@ public class VinilosAdapter extends RecyclerView.Adapter<VinilosAdapter.VinilosV
             cardImage = parent.findViewById(R.id.cardImage);
             txtCodigo = parent.findViewById(R.id.txtCodigo);
             txtNombre = parent.findViewById(R.id.txtNombre);
-            txtMarca = parent.findViewById(R.id.txtMarca);
+            txtColor = parent.findViewById(R.id.txtColor);
             txtPrecio = parent.findViewById(R.id.txtPrecio);
         }
 

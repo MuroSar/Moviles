@@ -6,27 +6,21 @@ import android.os.Parcelable;
 public class Vinilo implements Parcelable{
 
     private String codigo;
-    private String marca;
     private String nombre;
     private String color;
-    private String codColor;
     private double precio;
 
-    public Vinilo(String codigo, String marca, String nombre, String color, String codColor, double precio) {
+    public Vinilo(String codigo, String nombre, String color, double precio) {
         this.codigo = codigo;
-        this.marca = marca;
         this.nombre = nombre;
         this.color = color;
-        this.codColor = codColor;
         this.precio = precio;
     }
 
     protected Vinilo(Parcel in) {
         codigo = in.readString();
-        marca = in.readString();
         nombre = in.readString();
         color = in.readString();
-        codColor = in.readString();
         precio = in.readDouble();
     }
 
@@ -50,14 +44,6 @@ public class Vinilo implements Parcelable{
         this.codigo = codigo;
     }
 
-    public String getMarca() {
-        return marca;
-    }
-
-    public void setMarca(String marca) {
-        this.marca = marca;
-    }
-
     public String getNombre() {
         return nombre;
     }
@@ -72,14 +58,6 @@ public class Vinilo implements Parcelable{
 
     public void setColor(String color) {
         this.color = color;
-    }
-
-    public String getCodColor() {
-        return codColor;
-    }
-
-    public void setCodColor(String codColor) {
-        this.codColor = codColor;
     }
 
     public double getPrecio() {
@@ -98,10 +76,8 @@ public class Vinilo implements Parcelable{
     @Override
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeString(codigo);
-        dest.writeString(marca);
         dest.writeString(nombre);
         dest.writeString(color);
-        dest.writeString(codColor);
         dest.writeDouble(precio);
     }
 }

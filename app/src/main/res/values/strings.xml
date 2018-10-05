@@ -19,7 +19,7 @@
 
     <!--Card activity -->
     <string name="nombre">Nombre: </string>
-    <string name="marca">Marca: </string>
+    <string name="color">Color: </string>
     <string name="codigo">Código: </string>
     <string name="precio">Precio: </string>
 
