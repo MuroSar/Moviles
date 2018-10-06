@@ -3,8 +3,10 @@
 
     <dimen name="main_title_size">30sp</dimen>
 
+    <dimen name="margin_0sp">0sp</dimen>
     <dimen name="margin_3sp">3sp</dimen>
     <dimen name="margin_5sp">5sp</dimen>
+    <dimen name="margin_10sp">10sp</dimen>
     <dimen name="margin_15sp">15sp</dimen>
     <dimen name="margin_60sp">60sp</dimen>
     <dimen name="margin_120sp">120sp</dimen>
@@ -21,5 +23,7 @@
     <dimen name="card_image_side">100dp</dimen>
     <dimen name="card_elevation">4dp</dimen>
     <dimen name="card_corner_radius">1dp</dimen>
+
+    <dimen name="dialog_title">15sp</dimen>
 
 </resources>

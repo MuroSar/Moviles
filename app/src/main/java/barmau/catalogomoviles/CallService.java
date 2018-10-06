@@ -18,6 +18,7 @@ import java.net.URL;
 
 public class CallService extends IntentService {
 
+    private static final int CODIGO_DEFAULT = -1;
     public static final String RESPONSE_ACTION = "Respuesta del servidor";
     public static final String RESPONSE = "DATA RESPONSE";
     public static final String SERVICE_TYPE = "SERVICE_TYPE";
@@ -30,7 +31,15 @@ public class CallService extends IntentService {
 
     @Override
     protected void onHandleIntent(@Nullable Intent intent) {
-        Uri builtURI = Uri.parse(BASE_URL + "getcatalogo").buildUpon().build();
+        Uri builtURI;
+        int codigo = intent.getIntExtra(MainActivity.CODIGO, CODIGO_DEFAULT);
+
+        if (codigo == CODIGO_DEFAULT) {
+            builtURI = Uri.parse(BASE_URL + "getcatalogo").buildUpon().build();
+        } else {
+            builtURI = Uri.parse(BASE_URL + "getelementos/" + codigo).buildUpon().build();
+        }
+
         InputStream is = null;
         HttpURLConnection conn = null;
         try {
@@ -45,7 +54,7 @@ public class CallService extends IntentService {
             is = conn.getInputStream();
             String contentAsString = toString(is);
 
-            Log.d(TAG, contentAsString);
+            //Log.d(TAG, contentAsString);
 
             Intent response = new Intent(RESPONSE_ACTION);
             response.putExtra(RESPONSE, contentAsString);

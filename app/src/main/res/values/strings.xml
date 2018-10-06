@@ -8,17 +8,26 @@
     <string name="buscar_vinilo">Buscar un vinilo</string>
     <string name="sobre_nosotros">Sobre nosotros</string>
 
-    <string name="no_hay_elementos">No hay elementos para mostrar</string>
-
     <!--Sobre nosotros activity -->
     <string name="info_sobre_nosotros">TP realizado como final de las materias \"Introducción a la programación de dispositivos moviles\" y \"Computación orientada a servicios\"</string>
     <string name="cynthia_romina_marin">Cynthia Romina Marin</string>
     <string name="mauro_sarti">Mauro Sarti</string>
 
     <!--Card activity -->
-    <string name="nombre">Nombre: </string>
-    <string name="color">Color: </string>
-    <string name="codigo">Código: </string>
-    <string name="precio">Precio: </string>
+    <string name="nombre_points">Nombre: </string>
+    <string name="color_points">Color: </string>
+    <string name="codigo_points">Código: </string>
+    <string name="precio_points">Precio: </string>
 
+    <!--GetVinilo Dialog -->
+    <string name="ingrese_codigo">INGRESE EL CÓDIGO</string>
+    <string name="codigo">Código</string>
+    <string name="buscar">Buscar</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="cerrar">Cerrar</string>
+    <string name="no_vacio">El código no puede estar vacío</string>
+
+    <!--Toasts -->
+    <string name="no_hay_elementos">No hay elementos para mostrar</string>
+    <string name="no_existe_elemento">No existe ese elemento</string>
 </resources>

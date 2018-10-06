@@ -3,11 +3,13 @@ package barmau.catalogomoviles.adapters;
 import android.content.Context;
 import android.graphics.Color;
 import android.support.annotation.NonNull;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.List;
@@ -60,8 +62,6 @@ public class VinilosAdapter extends RecyclerView.Adapter<VinilosAdapter.VinilosV
         TextView txtColor;
         TextView txtPrecio;
 
-//        private int imageId;
-
         public VinilosViewHolder(View parent) {
             super(parent);
 
@@ -71,10 +71,5 @@ public class VinilosAdapter extends RecyclerView.Adapter<VinilosAdapter.VinilosV
             txtColor = parent.findViewById(R.id.txtColor);
             txtPrecio = parent.findViewById(R.id.txtPrecio);
         }
-
-//        @OnClick(R.id.cardImage)
-//        public void callServiceCardPressed(ImageView cardImage) {
-//            RxBus.post(new CallServiceCardObserver.CallServiceCardPressed(imageId));
-//        }
     }
 }

@@ -1,5 +1,6 @@
 package barmau.catalogomoviles;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -27,5 +28,11 @@ public class CatalogoActivity extends AppCompatActivity {
 
         recyclerView.setAdapter(new VinilosAdapter(vinilos));
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
     }
 }
