@@ -27,28 +27,16 @@
         android:text="@string/ver_catalogo" />
 
     <Button
-        android:id="@+id/btnAgregarVinilo"
+        android:id="@+id/btnBuscarVinilo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/agregar_vinilo" />
-
-    <Button
-        android:id="@+id/btnModificarVinilo"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/modificar_vinilo" />
-
-    <Button
-        android:id="@+id/btnEliminarVinilo"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/eliminar_vinilo" />
+        android:text="@string/buscar_vinilo" />
 
     <Button
         android:id="@+id/btnSobreNosotros"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margin_60sp"
+        android:layout_marginTop="@dimen/margin_150sp"
         android:text="@string/sobre_nosotros" />
 
 </LinearLayout>

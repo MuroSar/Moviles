@@ -29,42 +29,17 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Button btnVerCatalogo = findViewById(R.id.btnVerCatalogo);
-        Button btnAgregarVinilo = findViewById(R.id.btnAgregarVinilo);
-        Button btnModificarVinilo = findViewById(R.id.btnModificarVinilo);
-        Button btnEliminarVinilo = findViewById(R.id.btnEliminarVinilo);
+        Button btnBuscarVinilo = findViewById(R.id.btnBuscarVinilo);
         Button btnSobreNosotros = findViewById(R.id.btnSobreNosotros);
 
         btnVerCatalogo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //primero llamo al servicio para que me traiga una lista de vinilos
-
-                //List<Vinilo> vinilos = new ArrayList<>();
-                //Vinilo v1 = new Vinilo("a1", "marca1", "vinilo-a1", "rojo", "FF0000", 11.5);
-                //Vinilo v2 = new Vinilo("b2", "marca1", "vinilo-b2", "azul", "0101DF", 12.4);
-                //vinilos.add(v1);
-                //vinilos.add(v2);
-                //showVinilos(vinilos);
-
                 getVinilos();
             }
         });
 
-        btnAgregarVinilo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
-
-        btnModificarVinilo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
-
-        btnEliminarVinilo.setOnClickListener(new View.OnClickListener() {
+        btnBuscarVinilo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -82,7 +57,6 @@ public class MainActivity extends AppCompatActivity {
 
     public void showVinilos(List<Vinilo> vinilos) {
         if(!vinilos.isEmpty()){
-            //pasarle por parametro la lista con las imagenes
             Intent intent = new Intent(getApplicationContext(), CatalogoActivity.class);
 
             Bundle parametro = new Bundle();
@@ -101,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
         final Intent mServiceIntent = new Intent(this, CallService.class);
 
         ConnectivityManager connMgr = (ConnectivityManager) getSystemService(MainActivity.CONNECTIVITY_SERVICE);
-        NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
+        //NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
         startService(mServiceIntent);
     }
 }

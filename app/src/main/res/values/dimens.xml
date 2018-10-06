@@ -8,6 +8,7 @@
     <dimen name="margin_15sp">15sp</dimen>
     <dimen name="margin_60sp">60sp</dimen>
     <dimen name="margin_120sp">120sp</dimen>
+    <dimen name="margin_150sp">150sp</dimen>
 
     <dimen name="info_size_sobre_nosotros">20sp</dimen>
     <dimen name="info_size">15sp</dimen>
