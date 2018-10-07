@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
 
             startActivity(intent);
         } else {
-            showNoElements();
+            showToastNoElements();
         }
     }
 
@@ -89,7 +89,12 @@ public class MainActivity extends AppCompatActivity {
 
         ConnectivityManager connMgr = (ConnectivityManager) getSystemService(MainActivity.CONNECTIVITY_SERVICE);
         NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
-        startService(mServiceIntent);
+
+        if (networkInfo == null) {
+            showToastNeedInternet();
+        } else {
+            startService(mServiceIntent);
+        }
     }
 
     private void getVinilo(int codigo) {
@@ -99,8 +104,15 @@ public class MainActivity extends AppCompatActivity {
 
         ConnectivityManager connMgr = (ConnectivityManager) getSystemService(MainActivity.CONNECTIVITY_SERVICE);
         NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
-        startService(mServiceIntent);
+
+        if (networkInfo == null) {
+            showToastNeedInternet();
+        } else {
+            startService(mServiceIntent);
+        }
     }
+
+    //region Dialog
 
     public void setViniloDialog(Vinilo vinilo) {
         EditText edtCodigo = view.findViewById(R.id.edt_codigo);
@@ -203,7 +215,17 @@ public class MainActivity extends AppCompatActivity {
         btnCerrar.setVisibility(View.GONE);
     }
 
-    public void showNoElements() {
+    //endregion Dialog
+
+    //region Toasts
+
+    public void showToastNoElements() {
         Toast.makeText(getApplicationContext(), R.string.no_hay_elementos, Toast.LENGTH_SHORT).show();
     }
+
+    private void showToastNeedInternet() {
+        Toast.makeText(getApplicationContext(), R.string.no_hay_internet, Toast.LENGTH_SHORT).show();
+    }
+
+    //endregion Toasts
 }

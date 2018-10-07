@@ -28,7 +28,7 @@ public class LocalReceiver extends BroadcastReceiver {
             String response = intent.getStringExtra(CallService.RESPONSE);
 
             if (response == null) {
-                mainActivity.showNoElements();
+                mainActivity.showToastNoElements();
                 return;
             }
 

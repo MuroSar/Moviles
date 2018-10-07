@@ -30,4 +30,6 @@
     <!--Toasts -->
     <string name="no_hay_elementos">No hay elementos para mostrar</string>
     <string name="no_existe_elemento">No existe ese elemento</string>
+    <string name="no_hay_internet">Se necesita internet para esta acción</string>
+
 </resources>
