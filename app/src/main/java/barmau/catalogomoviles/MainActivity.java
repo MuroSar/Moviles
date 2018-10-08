@@ -220,11 +220,11 @@ public class MainActivity extends AppCompatActivity {
     //region Toasts
 
     public void showToastNoElements() {
-        Toast.makeText(getApplicationContext(), R.string.no_hay_elementos, Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, R.string.no_hay_elementos, Toast.LENGTH_SHORT).show();
     }
 
     private void showToastNeedInternet() {
-        Toast.makeText(getApplicationContext(), R.string.no_hay_internet, Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, R.string.no_hay_internet, Toast.LENGTH_SHORT).show();
     }
 
     //endregion Toasts
